@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Get It Done</string>
+    <string name="new_task">New task</string>
+    <string name="new_task_details_hint">Add Details</string>
+    <string name="dialog_add_task_details_button">Add details</string>
+    <string name="dialog_add_task_star_button">Star task</string>
+    <string name="save">save</string>
+    <string name="add_new_list">add new list</string>
+    <string name="create_button_text">Create</string>
+    <string name="create_text">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="list_name">List Name</string>
+</resources>
