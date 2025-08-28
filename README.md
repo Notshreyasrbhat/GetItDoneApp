@@ -20,7 +20,7 @@ home page
 dark mode
 ![App Screenshot](darkmode.png)
 starred list with cross out ones 
-![App Screenshot](https://github.com/Notshreyasrbhat/GetItDoneApp/blob/master/starred.png)
+(![App Screenshot](https://raw.githubusercontent.com/Notshreyasrbhat/GetItDoneApp/master/starred.png)
 
 ---
 
