@@ -4,7 +4,6 @@
 A concise and intuitive to-do/task management Android app built with Kotlin. Helps users organize tasks, set deadlines, and boost productivity.
 
 ---
-<img width="329" height="757" alt="Screenshot 2025-08-27 193352" src="https://github.com/user-attachments/assets/75822a08-c7c6-4d19-ac04-b1714544300a" />
 
 ##  Features
 
