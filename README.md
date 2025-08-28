@@ -14,13 +14,14 @@ A concise and intuitive to-do/task management Android app built with Kotlin. Hel
 
 ---
 
-##  Screenshots
-home page
-![App Screenshot](homescreen.png)
-dark mode
-![App Screenshot](darkmode.png)
-starred list with cross out ones 
-![App Screenshot](https://raw.githubusercontent.com/Notshreyasrbhat/GetItDoneApp/636576fbd844682318f19e475a7b8dd/starred.png)
+## Screenshots
+
+<p align="center">
+  <img src="homescreen.png" alt="Home Screen" width="200"/>
+  <img src="darkmode.png" alt="Dark Mode" width="200"/>
+  <img src="starred.png" alt="Starred List" width="200"/>
+</p>
+
 
 
 ---
