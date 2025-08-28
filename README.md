@@ -15,6 +15,12 @@ A concise and intuitive to-do/task management Android app built with Kotlin. Hel
 ---
 
 ##  Screenshots
+home page
+![App Screenshot](20193352.png)
+dark mode
+![App Screenshot](20225737.png)
+starred list with cross out ones 
+![App Screenshot](20225909.png)
 
 ---
 
