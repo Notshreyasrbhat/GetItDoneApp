@@ -16,12 +16,7 @@ A concise and intuitive to-do/task management Android app built with Kotlin. Hel
 
 
 ## Screenshots
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Notshreyasrbhat/GetItDoneApp/master/homescreen.png" width="200"/>
-  <img src="https://raw.githubusercontent.com/Notshreyasrbhat/GetItDoneApp/master/darkmode.png" width="200"/>
-  <img src="https://raw.githubusercontent.com/Notshreyasrbhat/GetItDoneApp/master/starred.png" width="200"/>
-</p>
+![homescreeen](homescreen.png)
 
 ---
 
