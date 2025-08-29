@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Button to add a new task list -->
 <com.google.android.material.button.MaterialButton
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     style="@style/ThemeOverlay.Material3.Button.TextButton"
-    android:text="@string/add_new_list"
-    android:layout_height="match_parent"/>
-
-
+    android:text="@string/add_new_list" />

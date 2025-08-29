@@ -12,10 +12,19 @@ import com.project.getitdone.databinding.FragmentTasksBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class StarredTasksFragment: Fragment() ,TasksAdapter.TaskItemClickListener{
+/**
+ * Fragment responsible for displaying only the starred tasks in a RecyclerView.
+ * Uses [StarredTaskViewModel] to fetch, update and delete tasks.
+ */
+class StarredTasksFragment : Fragment(), TasksAdapter.TaskItemClickListener {
 
-    private val viewModel : StarrredTaskViewModel by viewModels()
+    // ViewModel instance scoped to this fragment's lifecycle
+    private val viewModel: StarredTaskViewModel by viewModels()
+
+    // View binding for fragment layout
     private lateinit var binding: FragmentTasksBinding
+
+    // Adapter for RecyclerView, handles displaying list of tasks
     private val adapter = TasksAdapter(this)
 
     override fun onCreateView(
@@ -23,30 +32,44 @@ class StarredTasksFragment: Fragment() ,TasksAdapter.TaskItemClickListener{
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding= FragmentTasksBinding.inflate(inflater,container,false)
+        // Inflate layout and initialize binding
+        binding = FragmentTasksBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerView.adapter=adapter
-        fetchAllTasks()
+
+        // Set adapter for RecyclerView
+        binding.recyclerView.adapter = adapter
+
+        // Start observing starred tasks
+        fetchStarredTasks()
     }
 
-    private fun fetchAllTasks() {
-        lifecycleScope.launch {
+    /**
+     * Collects starred tasks from ViewModel and updates adapter whenever data changes.
+     * Uses viewLifecycleOwner.lifecycleScope to avoid memory leaks when fragment view is destroyed.
+     */
+    private fun fetchStarredTasks() {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchTasks().collectLatest { tasks ->
                 adapter.setTasks(tasks)
             }
         }
     }
 
+    /**
+     * Handles when user updates a task (e.g., marking complete or toggling star).
+     */
     override fun onTaskUpdated(task: Task) {
         viewModel.updateTask(task)
     }
 
+    /**
+     * Handles when user deletes a task (via long press).
+     */
     override fun onTaskDeleted(task: Task) {
         viewModel.deleteTask(task)
     }
-
 }

@@ -10,19 +10,31 @@ import kotlinx.coroutines.launch
 
 class TaskViewModel : ViewModel() {
 
-   private val repository: TaskRepository = GetItDoneApplication.taskRepository
+    // Repository instance (shared across app via Application singleton).
+    // Handles all task CRUD operations for a given task list.
+    private val repository: TaskRepository = GetItDoneApplication.taskRepository
 
+    /**
+     * Fetches all tasks belonging to a specific TaskList.
+     * Returns a Flow so UI can react to real-time DB changes.
+     */
     fun fetchTasks(taskListId: Int): Flow<List<Task>> {
         return repository.getTasks(taskListId)
-
     }
 
+    /**
+     * Updates an existing task in the database.
+     * Example: marking it completed, editing title, etc.
+     */
     fun updateTask(task: Task) {
         viewModelScope.launch {
             repository.updateTask(task)
         }
     }
 
+    /**
+     * Deletes a task permanently from the database.
+     */
     fun deleteTask(task: Task) {
         viewModelScope.launch {
             repository.deleteTask(task)

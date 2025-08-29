@@ -6,36 +6,35 @@ import com.project.getitdone.data.model.Task
 import com.project.getitdone.data.model.TaskList
 import kotlinx.coroutines.flow.Flow
 
-class TaskRepository(private  val taskDao: TaskDao,private val taskListDao: TaskListDao){
+// Repository acts as a single source of truth for tasks & task lists
+class TaskRepository(
+    private val taskDao: TaskDao,
+    private val taskListDao: TaskListDao
+) {
 
     suspend fun createTask(task: Task) {
         taskDao.createTask(task)
     }
 
-    fun getTasks(taskListId: Int): Flow<List<Task>> {
-         return taskDao.getAllTasks(taskListId)
-    }
-    fun getTaskLists(): Flow<List<TaskList>> {
-        return taskListDao.getAllLists()
-    }
+    fun getTasks(taskListId: Int): Flow<List<Task>> =
+        taskDao.getAllTasks(taskListId)
 
-    fun getStarredTasks(): Flow<List<Task>> {
-         return taskDao.getStarredTasks()
-    }
+    fun getTaskLists(): Flow<List<TaskList>> =
+        taskListDao.getAllLists()
 
-    suspend fun updateTask(task: Task){
+    fun getStarredTasks(): Flow<List<Task>> =
+        taskDao.getStarredTasks()
+
+    suspend fun updateTask(task: Task) {
         taskDao.updateTask(task)
     }
 
-    suspend fun deleteTask(task:Task){
-       taskDao.deleteTask(task)
+    suspend fun deleteTask(task: Task) {
+        taskDao.deleteTask(task)
     }
 
     suspend fun createTaskList(listName: String) {
         val taskList = TaskList(name = listName)
         taskListDao.createTaskList(taskList)
-
     }
-
-
 }
