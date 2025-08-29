@@ -11,8 +11,11 @@ A concise and intuitive to-do/task management Android app built with Kotlin. Hel
 - Dark mode support 
 
 ## Screenshots
+homescreen
 ![homescreeen](homescreen.png)
+darkmode
 ![homescreeen](darkmode.png)
+starred list with complete task
 ![homescreeen](starred.png)
 
 ---
