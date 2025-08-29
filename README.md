@@ -1,32 +1,28 @@
-````markdown
 # GetItDoneApp
 
 A concise and intuitive to-do/task management Android app built with Kotlin. Helps users organize tasks, set deadlines, and boost productivity.
 
----
 
-##  Features
+## Features
 
 - Create, view, edit, and delete tasks  
 - Organize tasks by categories or tags
 - Proratize tasks as starred if need be
 - Dark mode support 
 
----
-
-
 ## Screenshots
 ![homescreeen](homescreen.png)
+![homescreeen](darkmode.png)
+![homescreeen](starred.png)
 
 ---
 
-##  Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**  
-   ```bash
    git clone https://github.com/Notshreyasrbhat/GetItDoneApp.git
    cd GetItDoneApp
-````
+
 
 2. **Open in Android Studio**
 
@@ -38,11 +34,9 @@ A concise and intuitive to-do/task management Android app built with Kotlin. Hel
    * Connect an Android device or set up an emulator.
    * Click **Run ▶**.
 
----
 
 ## Project Structure
-
-```
+~~~
 /.idea/               – IDE settings (you may want to exclude this from repo)
 /app/                 – Android app module
   ├── src/
@@ -55,23 +49,20 @@ build.gradle.kts      – Root-level Gradle config
 settings.gradle.kts
 gradle.properties
 gradlew, gradlew.bat, gradle/ – Gradle wrapper
-```
-
----
+~~~
 
 ## Dependencies
 
 Below are some of the likely libraries your project uses. Feel free to edit based on your actual code:
 
-| Library                   | Purpose                    |
-| ------------------------- | -------------------------- |
-| AndroidX Core & AppCompat | Base Android support       |
-| Material Components       | Material design UI         |
-| Room / Realm / SQLite     | Local data persistence     |
-| Kotlin Coroutines         | Asynchronous operations    |
-| ViewBinding / DataBinding | UI binding convenience     |
+| Library                   | Purpose                 |
+| ------------------------- | ----------------------- |
+| AndroidX Core & AppCompat | Base Android support    |
+| Material Components       | Material design UI      |
+| Room / Realm / SQLite     | Local data persistence  |
+| Kotlin Coroutines         | Asynchronous operations |
+| ViewBinding / DataBinding | UI binding convenience  |
 
----
 
 ## Usage
 
@@ -80,8 +71,6 @@ Below are some of the likely libraries your project uses. Feel free to edit base
 3. Fill in task details (title, due date, tags, etc.).
 4. Save to view it listed on the home screen.
 5. Tap a task to mark complete, edit, or delete.
-
----
 
 ## Contributing
 
@@ -93,17 +82,13 @@ Contributions are welcome! Feel free to:
 
 Please ensure your contributions are well-tested and maintain code quality.
 
-
 ## Acknowledgments
 
 * Inspired by GTD (Getting Things Done) productivity methodology.
 * Built with ❤️ using Kotlin and Android Jetpack libraries.
-
----
 
 ## Contact
 
 For support or inquiries, feel free to open an issue or reach out at:
 
 > **Notshreyasrbhat** on GitHub
----
